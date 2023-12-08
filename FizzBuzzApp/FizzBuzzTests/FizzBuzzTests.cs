@@ -9,7 +9,7 @@ public class Tests
     [SetUp]
     public void Setup()
     {
-        var rules = new IRule[] { new FizzRule(), new BuzzRule()};
+        var rules = new IRule[] { new FizzRule(), new BuzzRule(), new FizzBuzzRule()};
         evaluator = new RuleEvaluator(rules);
     }
 
@@ -23,5 +23,11 @@ public class Tests
     public void EvaluateRule_ShouldOutputBuzzForMultiplesOfFive()
     {
         Assert.That(evaluator.EvaluateRule(5), Is.EqualTo("Buzz"));
+    }
+
+    [Test]
+    public void EvaluateRule_ShouldOutputFizzBuzzForMultiplesOfBothThreeAndFive()
+    {
+        Assert.That(evaluator.EvaluateRule(15), Is.EqualTo("FizzBuzz"));
     }
 }
