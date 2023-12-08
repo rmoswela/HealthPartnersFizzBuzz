@@ -9,7 +9,7 @@ public class Tests
     [SetUp]
     public void Setup()
     {
-        var rules = new IRule[] { new FizzRule(), new BuzzRule(), new FizzBuzzRule()};
+        var rules = new IRule[] { new FizzRule(), new BuzzRule(), new FizzBuzzRule(new FizzRule(), new BuzzRule())};
         evaluator = new RuleEvaluator(rules);
     }
 

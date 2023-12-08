@@ -11,7 +11,9 @@ public class RuleEvaluator
 
     public string EvaluateRule(int number)
     {
-        foreach (var rule in rules)
+        var orderedRules = rules.OrderBy(x => x.OrderOfExecution).ToArray();
+
+        foreach (var rule in orderedRules)
         {
             var result = rule.ApplyRule(number);
             if (result != null)
