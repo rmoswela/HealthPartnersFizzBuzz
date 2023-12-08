@@ -30,4 +30,10 @@ public class Tests
     {
         Assert.That(evaluator.EvaluateRule(15), Is.EqualTo("FizzBuzz"));
     }
+
+    [Test]
+    public void EvaluateRule_ShouldOutputNumbersForOtherValues()
+    {
+        Assert.That(evaluator.EvaluateRule(2), Is.EqualTo("2"));
+    }
 }
