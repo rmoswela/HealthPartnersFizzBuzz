@@ -1,5 +1,5 @@
 # HealthPartnersFizzBuzz
-This project is part of HealthPartners interview to create small fizz buzz program using SOLID design principles and Reflection.
+This project is part of HealthPartners interview, which is to create small fizz buzz program using SOLID design principles and Reflection.
 
 ## The challenge
 
